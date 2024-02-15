@@ -1,13 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alpha Affiliates</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <header class="header">
+      <div class="header__logo"></div>
+      <ul class="header__menu"></ul>
+      <div class="header__social">
+        <div class="header__social-telegram"></div>
+        <div class="header__social-instagram"></div>
+        <div class="header__social-linkedin"></div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="main__cover cover">
+        <h1 class="cover__heading">
+          Your journey to the big one begins <span>here</span>
+        </h1>
+        <h3 class="cover__subheading">
+          Step into a culture where achieving more, being more, and securing a
+          brighter future are part of our day-to-day.
+        </h3>
+        <a href="#" class="cover__jobs">See all jobs</a>
+        photo
+      </section>
+      <section class="main__vacancies vacancies">
+        <h2 class="vacancies__heading">Our vacancies</h2>
+        <div class="vacancies__list list">
+          <div class="list__item">
+            <span>Product/Web Analyst</span>
+            <img src="./images/arrow.svg" alt="arrow" />
+          </div>
+          <div class="list__item">
+            <span>CMO</span>
+            <img src="./images/arrow.svg" alt="arrow" />
+          </div>
+          <div class="list__item">
+            <span>Team Lead Affiliate</span>
+            <img src="./images/arrow.svg" alt="arrow" />
+          </div>
+          <div class="list__item">
+            <span>Affiliate Manager</span>
+            <img src="./images/arrow.svg" alt="arrow" />
+          </div>
+          <div class="list__item">
+            <span>General</span>
+            <img src="./images/arrow.svg" alt="arrow" />
+          </div>
+        </div>
+      </section>
+      <section class="main__leaders leaders">
+        <h2 class="leaders__heading">Market leaders</h2>
+        <span class="leaders__description"
+          >We are an international digital marketing company and one of the
+          leaders in the iGaming industry. We're not just keeping up with the
+          industry; we're setting the pace. Join us in shaping the future, as we
+          strive for continuous improvement and go head-to-head with industry
+          leaders. Ready to be a driving force in our success story? Let's make
+          strides together!</span
+        >
+        <div class="leaders__statistic">
+          <div class="leaders__statistic-block">
+            <span>15 000+</span>
+            <span>partners</span>
+          </div>
+          <div class="leaders__statistic-block">
+            <span>2 000 000+</span>
+            <span>players worldwide</span>
+          </div>
+          <div class="leaders__statistic-block">
+            <span>50 000 000€</span>
+            <span>paid to partners in 2022</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
   </body>
 </html>
