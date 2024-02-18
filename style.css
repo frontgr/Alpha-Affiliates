@@ -144,4 +144,13 @@ main section {
 
 /*  */
 footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 206px;
+  background-color: #111111;
+  padding-top: 109px;
+}
+.footer__legal {
+  color: #d7d7d7;
 }
