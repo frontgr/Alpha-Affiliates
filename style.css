@@ -292,7 +292,38 @@ main section {
   margin-top: 45px;
   margin-bottom: 120px;
 }
-
+.relocation {
+  display: flex;
+  flex-direction: column;
+}
+.benefits {
+  display: flex;
+  flex-direction: column;
+}
+.benefits__heading {
+  font-size: 36px;
+  margin-bottom: 70px;
+}
+.benefits__block {
+  display: flex;
+  align-items: center;
+}
+.benefits__list {
+  display: flex;
+  height: 189px;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+.benefits__list li {
+  margin: 10px;
+  width: 297px;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  height: 72px;
+  font-size: 24px;
+  border-left: 3px solid #ff1400;
+}
 footer {
   display: flex;
   justify-content: space-around;
