@@ -10,7 +10,7 @@ html {
 }
 header {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   top: 0;
   left: 0;
   height: 140px;
@@ -258,6 +258,41 @@ main section {
 .leaders__statistic-block div span:last-child {
   font-size: 24px;
 }
+.community,
+.professionals {
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+.professionals {
+  margin-top: 00px;
+}
+.community__text,
+.professionals__text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.community__text h2,
+.professionals__text h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+.community__text span,
+.professionals__text span {
+  font-size: 24px;
+  line-height: 36px;
+}
+.community__text span b {
+  color: #ff1400;
+}
+.main__relocation-heading {
+  max-width: 100%;
+  margin-top: 45px;
+  margin-bottom: 120px;
+}
+
 footer {
   display: flex;
   justify-content: space-around;
