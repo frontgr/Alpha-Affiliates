@@ -216,6 +216,48 @@ main section {
 .list__item:nth-child(5):hover svg path {
   stroke: white;
 }
+.leaders {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+}
+.leaders span {
+  font-size: 24px;
+  line-height: 36px;
+}
+.leaders h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+.leaders__statistic {
+  justify-content: space-between;
+  margin-top: 120px;
+  display: flex;
+}
+.leaders__statistic-block {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #d7d7d7;
+  border-radius: 20px;
+  width: 420px;
+  height: 161px;
+}
+.leaders__statistic-block div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.leaders__statistic-block div span:first-child {
+  font-weight: 900;
+  font-size: 48px;
+  color: #ff1400;
+  margin-bottom: 8px;
+}
+.leaders__statistic-block div span:last-child {
+  font-size: 24px;
+}
 footer {
   display: flex;
   justify-content: space-around;
