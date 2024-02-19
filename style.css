@@ -2,6 +2,7 @@
 * {
   font-family: "Montserrat", sans-serif;
   margin: 0;
+  box-sizing: border-box;
   padding: 0;
 }
 html {
@@ -76,6 +77,9 @@ header {
 }
 main {
   padding-top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 main section {
   max-width: 1400px;
@@ -141,15 +145,84 @@ main section {
   --myColor2: #000;
   box-shadow: 0px 4px 15px 0px rgba(149, 7, 7, 1); /* Apply box shadow on hover */
 }
-
-/*  */
+.vacancies {
+  flex-wrap: wrap;
+  display: flex;
+}
+.vacancies__heading {
+  font-size: 36px;
+  margin-top: 120px;
+  margin-bottom: 70px;
+}
+.vacancies .list {
+  gap: 30px;
+  flex-wrap: wrap;
+  display: flex;
+}
+.list__item {
+  padding: 0px 45px 0px 30px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #d7d7d7;
+  display: flex;
+  border-radius: 20px;
+  width: 680px;
+  height: 80px;
+  transition: all 0.25s ease;
+}
+.list__item a {
+  display: inline-block;
+  font-size: 20px;
+  text-decoration: none;
+}
+.list__item a:visited {
+  color: black;
+}
+.list__item:hover {
+  background-color: #111111;
+  color: white;
+  background-image: url("/images/vacancybg.png");
+  background-position: center center;
+  background-size: cover !important;
+  cursor: pointer;
+}
+.list__item:nth-child(1):hover a {
+  color: white;
+}
+.list__item:nth-child(2):hover a {
+  color: white;
+}
+.list__item:nth-child(3):hover a {
+  color: white;
+}
+.list__item:nth-child(4):hover a {
+  color: white;
+}
+.list__item:nth-child(5):hover a {
+  color: white;
+}
+.list__item:nth-child(1):hover svg path {
+  stroke: white;
+}
+.list__item:nth-child(2):hover svg path {
+  stroke: white;
+}
+.list__item:nth-child(3):hover svg path {
+  stroke: white;
+}
+.list__item:nth-child(4):hover svg path {
+  stroke: white;
+}
+.list__item:nth-child(5):hover svg path {
+  stroke: white;
+}
 footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 206px;
   background-color: #111111;
-  padding-top: 109px;
+  padding-top: 52px;
 }
 .footer__legal {
   color: #d7d7d7;
