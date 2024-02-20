@@ -363,7 +363,161 @@ main section {
   margin-right: 50px;
 }
 .form {
+  height: 935px;
   margin-top: 120px;
+  background-color: #e8e8e8;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form__email,
+.form__name {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+}
+.form__form {
+  border-right: 1px solid #d7d7d7;
+}
+.form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-right: 70px;
+}
+.form__input {
+  overflow: hidden;
+  width: 630px;
+  height: 100px;
+  border-radius: 20px;
+  border: 1px solid #9a9a9a;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+.form__input-message {
+  padding-top: 30px;
+  display: flex;
+  align-items: flex-start;
+  height: 325px;
+}
+.form__input-message textarea {
+  border: none;
+  resize: none;
+  font-size: 24px;
+  outline: none;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.form__email:focus,
+.form__name:active {
+  background: transparent;
+}
+.form__form div div {
+  width: 40px;
+  height: 2px;
+  background-color: #ff1400;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.form__line-message {
+  margin-top: 15px;
+}
+.form__input-send {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #111111;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(
+    140deg,
+    var(--myColor1),
+    var(--myColor2),
+    var(--myColor1)
+  );
+  transition: --myColor1 1s ease, --myColor2 1s ease;
+}
+.form__input-send:hover {
+  --myColor1: red;
+  --myColor2: #000;
+}
+.form__input-sendbox {
+  border: none;
+  transition: box-shadow 0.15s ease;
+}
+.form__input-sendbox:hover {
+  box-shadow: 0px 4px 15px 0px rgba(149, 7, 7, 1); /* Apply box shadow on hover */
+}
+.form__emails {
+  padding-left: 70px;
+}
+.form__social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.form__social-item {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #a8a8a8;
+  border-radius: 100%;
+  transition: border-color 0.15s ease-out;
+}
+.form__social-item:hover {
+  border-color: #ff1400;
+}
+.form__social-telegram,
+.form__social-instagram,
+.form__social-linkedin {
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+}
+.form__social-telegram {
+  background-image: url("./images/telegram-black.svg");
+}
+.form__social-instagram {
+  background-image: url("./images/instagram-black.svg");
+}
+.form__social-linkedin {
+  background-image: url("./images/linkedin-black.svg");
+}
+.form__redline {
+  width: 40px;
+  height: 3px;
+  background-color: #ff1400;
+}
+.form__block-email {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.form__block-email a {
+  display: inline-block;
+  margin-left: 10px;
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
+}
+.email {
+  margin-bottom: 70px;
+}
+.email h4 {
+  font-size: 24px;
+  font-weight: 700;
 }
 footer {
   display: flex;

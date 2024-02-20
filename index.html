@@ -296,13 +296,13 @@
           >
         </div>
       </section>
-      <section id="form" class="main__form form">
+      <div id="form" class="main__form form">
         <form action="#" class="form__form">
-          <div>
+          <div class="form__input">
             <div class="form__line"></div>
             <input type="text" class="form__name" placeholder="Full name" />
           </div>
-          <div>
+          <div class="form__input">
             <div class="form__line"></div>
             <input
               type="text"
@@ -310,51 +310,51 @@
               placeholder="Email Address"
             />
           </div>
-          <div>
-            <div class="form__line"></div>
-            <input type="text" class="form__message" placeholder="Message" />
+          <div class="form__input form__input-message">
+            <div class="form__line form__line-message"></div>
+            <textarea class="form__message" placeholder="Message"></textarea>
           </div>
-          <div>
-            <input type="submit" value="Send Message" />
+          <div class="form__input form__input-sendbox">
+            <input
+              type="submit"
+              class="form__input-send"
+              value="Send Message"
+            />
           </div>
         </form>
         <div class="form__emails">
           <div class="email">
             <div>
-              <h4>Support</h4>
-              <div>
+              <h4>Contact our HR Team</h4>
+              <div class="form__block-email">
                 <div class="form__redline"></div>
                 <a href="mailto:career@alpha-affiliates.com"
                   >partners@alpha-affiliates.com</a
                 >
               </div>
             </div>
-            <div>
-              <h4>Events</h4>
-              <div>
-                <div class="form__redline"></div>
-                <a href="mailto:event@alpha-affiliates.com"
-                  >event@alpha-affiliates.com</a
-                >
-              </div>
-            </div>
-            <div>
-              <h4>PR</h4>
-              <div>
-                <div class="form__redline"></div>
-                <a href="mailto:pr@alpha-affiliates.com"
-                  >pr@alpha-affiliates.com</a
-                >
-              </div>
-            </div>
           </div>
           <div class="form__socials">
-            <img src="./images/telegram.svg" alt="telegram icon" />
-            <img src="./images/instagram.svg" alt="instagram icon" />
-            <img src="./images/linkedin.svg" alt="linkedin icon" />
+            <div class="form__social">
+              <a
+                target="_blank"
+                href="https://t.me/A_Affiliates"
+                class="form__social-telegram form__social-item"
+              ></a>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/alphaaffiliates.career?igsh=dTJrdnpwMmFzdXVp"
+                class="form__social-instagram form__social-item"
+              ></a>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/company/alpha-affiliates/"
+                class="form__social-linkedin form__social-item"
+              ></a>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
     </main>
     <footer class="footer">
       <img
