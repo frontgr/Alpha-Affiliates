@@ -41,6 +41,7 @@
           href="https://www.instagram.com/alphaaffiliates.career?igsh=dTJrdnpwMmFzdXVp"
           class="header__social-instagram header__social-item"
         >
+        </a>
         <a
           target="_blank"
           href="https://www.linkedin.com/company/alpha-affiliates/"
@@ -298,22 +299,32 @@
         </div>
       </section>
       <div id="form" class="main__form form">
-        <form action="#" class="form__form">
+        <form action="#" class="form__form" id="myForm">
           <div class="form__input">
             <div class="form__line"></div>
-            <input type="text" class="form__name" placeholder="Full name" />
+            <input
+              type="text"
+              name="name"
+              class="form__name"
+              placeholder="Full name"
+            />
           </div>
           <div class="form__input">
             <div class="form__line"></div>
             <input
               type="text"
+              name="email"
               class="form__email"
               placeholder="Email Address"
             />
           </div>
           <div class="form__input form__input-message">
             <div class="form__line form__line-message"></div>
-            <textarea class="form__message" placeholder="Message"></textarea>
+            <textarea
+              name="descr"
+              class="form__message"
+              placeholder="Message"
+            ></textarea>
           </div>
           <div class="form__input form__input-sendbox">
             <input
@@ -323,6 +334,7 @@
             />
           </div>
         </form>
+
         <div class="form__emails">
           <div class="email">
             <div>
@@ -367,7 +379,43 @@
         >Copyright © 2024 Alpha Affiliates. All rights reserved.</span
       >
     </footer>
-    <script src="./js/scroll.js">
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("myForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault(); // Предотвращаем стандартное поведение отправки формы
+
+            const name = document.querySelector(".form__name").value;
+            const email = document.querySelector(".form__email").value;
+            const descr = document.querySelector(".form__message").value;
+
+            const data = {
+              name: name,
+              email: email,
+              descr: descr,
+            };
+            const jsonBody = JSON.stringify(data);
+            fetch("http://localhost:3000/send-email", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: jsonBody,
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                console.log(data); // Если нужно что-то сделать с ответом от сервера
+              })
+              .catch((error) => {
+                console.error(
+                  "There was an error with the fetch operation:",
+                  error,
+                );
+              });
+          });
+      });
     </script>
+    <script src="./js/scroll.js"></script>
   </body>
 </html>
