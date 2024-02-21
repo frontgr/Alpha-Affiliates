@@ -30,7 +30,7 @@ app.post("/send-email", async (req, res) => {
     service: "Gmail", // Используйте ваш почтовый сервис
     auth: {
       user: "nibezo.cs@gmail.com", // Ваш адрес электронной почты
-      pass: "", // Ваш пароль для приложения
+      pass: "tdfk edsg fszb nwex", // Ваш пароль для приложения
     },
   });
 
