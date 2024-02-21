@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alpha Affiliates</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="adaptive.css" />
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
   </head>
   <body>
+    <div class="popup" id="popup">
+      Sent!
+      <img src="./images/close.svg" alt="Close icon" />
+    </div>
     <header class="header">
       <div class="header__logo">
-        <img src="./images/logo-big 1.svg" alt="Logo of Alpha Affiliates" />
+        <img src="./images/logo-big1.svg" alt="Logo of Alpha Affiliates" />
       </div>
       <ul class="header__menu menu">
         <li class="menu__item">
@@ -227,7 +232,7 @@
         </div>
         <div class="professionals__photo">
           <img
-            src="./images/Team of professionals.png"
+            src="./images/Teamofprofessionals.png"
             alt="Phone with Alpha Affiliates people"
           />
         </div>
@@ -307,6 +312,7 @@
               name="name"
               class="form__name"
               placeholder="Full name"
+              required
             />
           </div>
           <div class="form__input">
@@ -316,6 +322,7 @@
               name="email"
               class="form__email"
               placeholder="Email Address"
+              required
             />
           </div>
           <div class="form__input form__input-message">
@@ -324,6 +331,7 @@
               name="descr"
               class="form__message"
               placeholder="Message"
+              required
             ></textarea>
           </div>
           <div class="form__input form__input-sendbox">
@@ -371,7 +379,7 @@
     </main>
     <footer class="footer">
       <img
-        src="./images/logo-big 1.svg"
+        src="./images/logo-big1.svg"
         alt="logo of Alpha Affiliates"
         class="footer__logo"
       />
@@ -379,43 +387,7 @@
         >Copyright © 2024 Alpha Affiliates. All rights reserved.</span
       >
     </footer>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("myForm")
-          .addEventListener("submit", function (event) {
-            event.preventDefault(); // Предотвращаем стандартное поведение отправки формы
-
-            const name = document.querySelector(".form__name").value;
-            const email = document.querySelector(".form__email").value;
-            const descr = document.querySelector(".form__message").value;
-
-            const data = {
-              name: name,
-              email: email,
-              descr: descr,
-            };
-            const jsonBody = JSON.stringify(data);
-            fetch("http://localhost:3000/send-email", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: jsonBody,
-            })
-              .then((response) => response.json())
-              .then((data) => {
-                console.log(data); // Если нужно что-то сделать с ответом от сервера
-              })
-              .catch((error) => {
-                console.error(
-                  "There was an error with the fetch operation:",
-                  error,
-                );
-              });
-          });
-      });
-    </script>
+    <script src="./js/sendEmail.js"></script>
     <script src="./js/scroll.js"></script>
   </body>
 </html>

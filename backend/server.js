@@ -39,8 +39,8 @@ app.post("/send-email", async (req, res) => {
     let info = await transporter.sendMail({
       from: "nibezo.cs@gmail.com",
       to: "nibezo.am@gmail.com", // Измените на адрес получателя
-      subject: `Сообщение от ${name}`,
-      text: `${descr}\n\nEmail отправителя: ${email}`,
+      subject: `Message from alphaaffiliatescareers.com ${"by " + name}`,
+      text: `Comment:\n\n${descr}\n\nEmail of sender is: ${email}`,
     });
 
     console.log("Отправлено сообщение: %s", info.messageId);

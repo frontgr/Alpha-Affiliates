@@ -1,9 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@property --myColor1 {
+  syntax: "<color>";
+  initial-value: #000;
+  inherits: false;
+}
+
+@property --myColor2 {
+  syntax: "<color>";
+  initial-value: #000;
+  inherits: false;
+}
 * {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   box-sizing: border-box;
   padding: 0;
+}
+
+.popup {
+  border: 1px solid #ff1400;
+  left: calc(50% - 120px);
+  top: calc(50% - 50px);
+  z-index: 2;
+  border-radius: 20px;
+  width: 240px;
+  display: none;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 44px;
+  cursor: pointer;
+  color: rgb(49, 49, 49);
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  transition: all 0.15s ease-in;
+}
+.popup:hover {
+  background-color: rgb(0, 0, 0);
+  border: 1px solid #000000;
+  color: rgb(255, 255, 255);
 }
 html {
   scroll-behavior: smooth;
@@ -115,17 +150,6 @@ main section {
   border-bottom-right-radius: 20px;
 }
 
-@property --myColor1 {
-  syntax: "<color>";
-  initial-value: #000;
-  inherits: false;
-}
-
-@property --myColor2 {
-  syntax: "<color>";
-  initial-value: #000;
-  inherits: false;
-}
 .jobs-check {
   width: 357px;
   height: 83px;
