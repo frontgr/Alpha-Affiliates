@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         descr: descr,
       };
       const jsonBody = JSON.stringify(data);
-      fetch("http://localhost:3000/send-email", {
+      fetch("http://alphaaffiliatescareers.com:3000/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
