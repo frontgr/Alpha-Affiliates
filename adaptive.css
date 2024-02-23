@@ -3,4 +3,9 @@
     flex-direction: column-reverse;
     align-items: center;
   }
+  .right-side img {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1410px) {
 }
