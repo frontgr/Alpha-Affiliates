@@ -122,7 +122,10 @@ main section {
   flex-direction: column;
   justify-content: center;
 }
-.right-side img {
+.right-side {
+  height: 650px;
+  width: 835px;
+  background-image: url("/images/photocover.png");
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }

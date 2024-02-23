@@ -6,6 +6,267 @@
   .right-side img {
     margin-bottom: 20px;
   }
+  .cover__heading {
+    margin-top: 30px;
+    width: 841px;
+  }
 }
-@media screen and (max-width: 1410px) {
+@media screen and (max-width: 1450px) {
+  main section {
+    max-width: 1024px;
+  }
+
+  .list__item {
+    width: 495px;
+  }
+  .community {
+    flex-direction: column;
+  }
+  .professionals {
+    flex-direction: column-reverse;
+    margin-top: 120px;
+    margin-bottom: 60px;
+  }
+  .leaders__statistic-block {
+    width: 320px;
+  }
+  .leaders__statistic-block div span:last-child {
+    font-size: 18px;
+  }
+  .leaders__statistic-block div span:first-child {
+    font-size: 38px;
+  }
+  .leaders__statistic {
+    display: none;
+  }
+}
+@media screen and (max-width: 1245px) {
+  .header .menu {
+    display: none;
+  }
+  .list__item {
+    width: 720px;
+  }
+  main section {
+    max-width: 720px;
+  }
+  .cover {
+    align-items: flex-start;
+    min-width: 700px;
+  }
+  .right-side {
+    height: 395px;
+    width: 720px;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 30px;
+  }
+  .cover__heading {
+    width: auto;
+    font-size: 45px;
+  }
+  .community__photo img,
+  .professionals__photo img {
+    width: 465px;
+  }
+  .benefits__block img {
+    display: none;
+  }
+  .benefits__list {
+    gap: 10px;
+  }
+  .landing__heading {
+    margin-top: 120px;
+  }
+  .landing__list {
+    gap: 60px;
+    justify-content: center;
+  }
+  .relocation__offering {
+    gap: 48px;
+  }
+  .relocation__offering span {
+    margin-right: 0;
+  }
+  .form {
+    flex-direction: column-reverse;
+    height: 1170px;
+  }
+  .form__form {
+    border: none;
+    margin-right: 0;
+    padding-right: 0px;
+  }
+  .form__emails {
+    margin-left: -230px;
+    padding: 0;
+    margin-bottom: 70px;
+  }
+}
+@media screen and (max-width: 890px) {
+  header {
+    flex-direction: column-reverse;
+  }
+  footer {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 786px) {
+  main section:first-child {
+    max-width: 100%;
+  }
+  .right-side {
+    width: 100%;
+  }
+  main section,
+  .cover__heading,
+  .cover__subheading {
+    max-width: 420px;
+  }
+  .cover__jobs {
+    width: 420px;
+  }
+  .cover {
+    min-width: 0;
+    align-items: center;
+  }
+  .list__item {
+    width: 420px;
+  }
+  .landing {
+    margin-top: 357px;
+  }
+  .relocation__offering {
+    flex-direction: column;
+  }
+  .form__input {
+    width: 420px;
+  }
+  .form__emails {
+    margin-left: -21px;
+  }
+}
+@media screen and (max-width: 472px) {
+  .right-side {
+    height: 271px;
+  }
+  .vacancies {
+    justify-content: center;
+  }
+  .right-side {
+    margin-bottom: 20px;
+  }
+  .cover__heading {
+    font-size: 40px;
+    margin-top: 0px;
+  }
+  .list__item {
+    width: 320px;
+  }
+  .vacancies .list {
+    justify-content: center;
+  }
+  .professionals__photo img,
+  .community__photo img {
+    width: 313px;
+    height: 304px;
+  }
+  main section,
+  .cover__heading,
+  .cover__subheading,
+  .cover__jobs {
+    max-width: 320px;
+  }
+  .vacancies__heading {
+    margin-top: 100px;
+    font-size: 24px;
+  }
+  .list__item a {
+    font-size: 18px;
+  }
+  .leaders h2 {
+    font-size: 24px;
+  }
+  .leaders span {
+    font-size: 18px;
+  }
+  .community,
+  .professionals {
+    margin-top: 100px;
+  }
+  .community__text h2,
+  .professionals__text h2 {
+    font-size: 24px;
+  }
+  .community__text span,
+  .professionals__text span {
+    font-size: 18px;
+  }
+  .benefits__heading {
+    font-size: 24px;
+  }
+  .benefits__list li {
+    font-size: 18px;
+  }
+  .landing__heading {
+    font-size: 24px;
+  }
+  .landing__item div {
+    font-size: 70px;
+  }
+  .landing__item p {
+    font-size: 18px;
+  }
+  .main__relocation-heading {
+    margin-top: 10px;
+    margin-bottom: 70px;
+  }
+  .benefits__heading {
+    margin-bottom: 45px;
+  }
+  .landing__heading {
+    margin-bottom: 45px;
+  }
+  .landing__list {
+    gap: 10px;
+  }
+  .relocation__offering {
+    margin-top: 100px;
+  }
+  .email h4 {
+    font-size: 18px;
+  }
+  .form__block-email a {
+    font-size: 18px;
+  }
+  .email {
+    margin-bottom: 35px;
+  }
+  .form {
+    height: 1040px;
+  }
+  .form__input {
+    width: 320px;
+  }
+  .form__email,
+  .form__name {
+    font-size: 18px;
+  }
+  .form__input-message textarea {
+    font-size: 18px;
+  }
+  footer img {
+    width: 320px;
+  }
+  footer span {
+    text-align: center;
+    width: 320px;
+  }
+  .header__logo img,
+  .jobs-check {
+    width: 320px;
+  }
+  .form__line-message {
+    width: 56px;
+  }
 }
