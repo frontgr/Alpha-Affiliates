@@ -1,39 +1,64 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const popup = document.getElementById("popup");
+function validateEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
 
+document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("myForm")
     .addEventListener("submit", function (event) {
-      event.preventDefault(); // Предотвращаем стандартное поведение отправки формы
-      popup.style.display = "flex"; // Показываем popup после успешной отправки формы
+      event.preventDefault();
+      var nameInput = document.getElementById("name");
+      var emailInput = document.getElementById("email");
+      var desrcInput = document.getElementById("desrc");
+      if (validateEmail(emailInput.value)) {
+        document.getElementById("emailbox").classList.remove("border-red");
 
-      const name = document.querySelector(".form__name").value;
-      const email = document.querySelector(".form__email").value;
-      const descr = document.querySelector(".form__message").value;
+        nameInput.disabled = true;
+        emailInput.disabled = true;
+        desrcInput.disabled = true;
 
-      const data = {
-        name: name,
-        email: email,
-        descr: descr,
-      };
-      const jsonBody = JSON.stringify(data);
-      fetch("http://alphaaffiliatescareers.com:3000/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: jsonBody,
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data); // Если нужно что-то сделать с ответом от сервера
+        var submitButton = document.getElementById("submit");
+        var submitBox = document.getElementById("form__submit");
+
+        submitButton.value = "Sent!";
+        submitButton.classList.remove("form__input-send");
+        submitButton.classList.add("form__input-sent");
+
+        submitBox.classList.remove("form__input-sendbox");
+        submitBox.classList.add("form__input-sentbox");
+        const name = document.querySelector(".form__name").value;
+        const email = document.querySelector(".form__email").value;
+        const descr = document.querySelector(".form__message").value;
+        nameInput.value = "";
+        emailInput.value = "";
+        desrcInput.value = "";
+        const data = {
+          name: name,
+          email: email,
+          descr: descr,
+        };
+        const jsonBody = JSON.stringify(data);
+        fetch("http://alphaaffiliatescareers.com:3000/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: jsonBody,
         })
-        .catch((error) => {
-          console.error("There was an error with the fetch operation:", error);
-        });
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+          })
+          .catch((error) => {
+            console.error(
+              "There was an error with the fetch operation:",
+              error,
+            );
+          });
+        s;
+      } else {
+        document.getElementById("emailbox").classList.add("border-red");
+      }
     });
-
-  popup.addEventListener("click", function () {
-    popup.style.display = "none"; // Закрываем popup при клике на него
-  });
 });
