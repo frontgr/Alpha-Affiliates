@@ -38,13 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
           email: email,
           descr: descr,
         };
-        const jsonBody = JSON.stringify(data);
-        fetch("http://alphaaffiliatescareers.com:3000/send-email", {
-          method: "POST",
+        const queryParams = new URLSearchParams(data).toString();
+        const url = `http://89.116.110.250:3000/send-email?${queryParams}`;
+        fetch(url, {
+          method: "GET",
           headers: {
             "Content-Type": "application/json",
           },
-          body: jsonBody,
         })
           .then((response) => response.json())
           .then((data) => {
@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
               error,
             );
           });
-        s;
       } else {
         document.getElementById("emailbox").classList.add("border-red");
       }

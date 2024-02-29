@@ -4,54 +4,52 @@ const nodemailer = require("nodemailer");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware to parse JSON bodies
-app.use(express.json());
-
 // Middleware to handle CORS
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*"); // Разрешить доступ со всех источников
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
     "Access-Control-Allow-Methods",
     "GET, POST, PUT, DELETE, OPTIONS",
-  ); // Разрешить указанные методы запроса, включая OPTIONS
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization"); // Разрешить указанные заголовки
+  );
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
 });
 
-// Обработка OPTIONS запросов
+// Handling OPTIONS requests
 app.options("*", (req, res) => {
   res.status(200).send();
 });
 
-app.post("/send-email", async (req, res) => {
-  const { name, email, descr } = req.body;
+// Route for sending email via GET request
+app.get("/send-email", async (req, res) => {
+  const { name, email, descr } = req.query; // Using query parameters instead of request body
 
   let transporter = nodemailer.createTransport({
-    service: "Gmail", // Используйте ваш почтовый сервис
+    service: "Gmail",
     auth: {
-      user: "nibezo.cs@gmail.com", // Ваш адрес электронной почты
-      pass: "tdfk edsg fszb nwex", // Ваш пароль для приложения
+      user: "nibezo.cs@gmail.com",
+      pass: "", // ur code is here :)
     },
   });
 
   try {
-    // Отправка электронной почты
+    // Sending email
     let info = await transporter.sendMail({
       from: "nibezo.cs@gmail.com",
-      to: "nibezo.am@gmail.com", // Измените на адрес получателя
+      to: "nibezo.cs@gmail.com",
       subject: `Message from alphaaffiliatescareers.com ${"by " + name}`,
       text: `Comment:\n\n${descr}\n\nEmail of sender is: ${email}`,
     });
 
-    console.log("Отправлено сообщение: %s", info.messageId);
-    res.status(200).send("Электронное письмо успешно отправлено!");
+    console.log("Message sent: %s", info.messageId);
+    res.status(200).send("Email successfully sent!");
   } catch (error) {
-    console.error("Произошла ошибка:", error);
-    res.status(500).send("Не удалось отправить электронное письмо!");
+    console.error("Error occurred:", error);
+    res.status(500).send("Failed to send email!");
   }
 });
 
-// Запуск сервера
+// Starting the server
 app.listen(PORT, () => {
-  console.log(`Сервер запущен на http://localhost:${PORT}`);
+  console.log(`Server is running at http://localhost:${PORT}`);
 });
